@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root {
+	--primary-dark: #222222;
+	--secondary-green: #5ab25a;
+}
+
+html,
+body {
+	font-family: 'Inter', sans-serif;
+	font-size: 20px;
+	background-color: var(--primary-dark);
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: #fff !important;
+}
+
+a:hover {
+	color: var(--secondary-green) !important;
+}
+
+#main-menu {
+	background-color: var(--primary-dark) !important;
+}
+
+#header-content {
+	overflow-x: hidden !important;
+}
+
+.polygon-wrapper {
+	position: relative;
+}
+
+.polygon {
+	clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 10% 50%);
+	background-color: var(--secondary-green);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+.animation-container {
+	height: 50px;
+	overflow: hidden;
+}
+
+.animation-wrapper {
+	overflow: hidden;
+	animation: move ease 2s infinite alternate;
+}
+
+.animation-item {
+	color: var(--secondary-green);
+	font-weight: 500;
+	font-size: 1.5rem;
+	margin: 10px auto;
+}
+
+/* KEYFRAMES */
+
+@keyframes move {
+	0% {
+		transform: translateY(20px);
+	}
+	25% {
+		transform: translateY(20px);
+	}
+
+	100% {
+		transform: translateY(-30px);
+	}
+}
