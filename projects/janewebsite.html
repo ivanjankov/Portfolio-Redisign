@@ -17,13 +17,14 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-		<link rel="stylesheet" href="../styles/janewebsite.css" />
-		<script type="text/javascript" src="../scripts/janewebsite.js"></script>
+		<link rel="stylesheet" href="../styles/projects.css" />
+		<script type="text/javascript" src="../scripts/projects.js"></script>
+		<script type="text/javascript" src="../main.js"></script>
 		<title>Ivan Jankov</title>
 	</head>
 	<body>
 		<nav
-			class="nav navbar navbar-expand-lg text-light"
+			class="nav navbar navbar-expand-lg text-light sticky-top"
 			id="main-menu"
 			role="navigation"
 		>
@@ -33,12 +34,22 @@
 				data-toggle="collapse"
 				data-target="#NavbarContent"
 				aria-controls="NavbarContent"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
 			>
-				<span class="navbar-toggler-icon"></span>
+				<span><i class="fas fa-bars" id="toggler"></i></span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="NavbarContent">
-				<ul class="navbar-nav m-auto">
+				<ul
+					class="
+						navbar-nav
+						m-auto
+						d-flex
+						justify-content-center
+						align-items-center
+					"
+				>
 					<li class="nav-item mx-3">
 						<a href="../index.html#about-me" class="nav-link">About Me</a>
 					</li>
@@ -50,10 +61,25 @@
 					</li>
 				</ul>
 			</div>
+			<div class="me-3" id="mode-trigger">
+				<input type="checkbox" class="checkbox" id="checkbox" />
+				<label for="checkbox" class="label">
+					<i class="fas fa-moon"></i>
+					<i class="fas fa-sun"></i>
+					<div class="ball"></div>
+				</label>
+			</div>
 		</nav>
 
 		<div id="project-content">
-			<div class="project-bg d-flex justify-content-center align-items-end">
+			<div
+				class="
+					project-bg-herbalife
+					d-flex
+					justify-content-center
+					align-items-end
+				"
+			>
 				<div
 					class="project-name d-flex align-items-center justify-content-center"
 				>
@@ -81,26 +107,38 @@
 						</div>
 					</div>
 
-					<div class="project-steps pb-5">
+					<div class="project-steps py-5">
 						<div class="container">
-							<h5 class="text-center my-5">
-								<span class="text-uppercase">Technologies Used: </span> HTML,
-								CSS, JavaScript
+							<h5 class="text-center my-5 position-relative">
+								<span class="text-uppercase">Technologies Used: </span>
+								Bootstrap, PHP, MySQL, JavaScript
 							</h5>
 						</div>
 						<div class="research-wrapper">
-							<div class="row my-5 position-relative">
+							<div
+								class="
+									row
+									my-5
+									position-relative
+									d-flex
+									align-items-center
+									justify-content-center
+								"
+							>
 								<div
 									class="
-										col-md-1
+										col-lg-1 col-md-2
 										d-flex
 										align-items-center
 										justify-content-center
+										d-none d-md-block
 									"
 								>
 									<img src="../img/simbols/search.png" class="img-fluid" />
 								</div>
-								<div class="col-md-10 offset-md-1 p-4 description-card">
+								<div
+									class="col-lg-10 col-sm-10 offset-lg-1 p-4 description-card"
+								>
 									<h3 class="my-2">Objective</h3>
 									<p>
 										Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
@@ -108,18 +146,29 @@
 									</p>
 								</div>
 							</div>
-							<div class="row mt-5">
+							<div
+								class="
+									row
+									mt-5
+									d-flex
+									align-items-center
+									justify-content-center
+								"
+							>
 								<div
 									class="
-										col-md-1
+										col-lg-1 col-md-2
 										d-flex
 										align-items-center
 										justify-content-center
+										d-none d-md-block
 									"
 								>
 									<img src="../img/simbols/pathway.png" class="img-fluid" />
 								</div>
-								<div class="col-md-10 offset-md-1 p-4 description-card">
+								<div
+									class="col-lg-10 col-sm-10 offset-lg-1 p-4 description-card"
+								>
 									<h3 class="my-2">Approach</h3>
 									<p>
 										After conducting several brand workshops to get fully
@@ -211,14 +260,47 @@
 							</div>
 						</div>
 					</div>
+					<div id="more-projects">
+						<div class="container">
+							<h2 class="h2 text-center my-5 position-relative">
+								More Projects
+							</h2>
+							<div class="row pb-5">
+								<div class="col-md-6 more-projects my-3">
+									<a href="lile-portfolio.html">
+										<img
+											src="../img/Projects/lile-portfolio/img/lile-mockup.png"
+											alt="Onofo Projects"
+											class="img-fluid"
+										/>
+									</a>
+								</div>
+								<div class="col-md-6 more-projects my-3">
+									<a href="onofo.html">
+										<img
+											src="../img/Projects/onofo/multiple-devices.png"
+											alt="Onofo Projects "
+											class="img-fluid"
+										/>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</body>
 
 	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"
+	></script>
+
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 		crossorigin="anonymous"
 	></script>
 </html>

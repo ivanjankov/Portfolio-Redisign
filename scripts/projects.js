@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-	// SLIDER FUNCTIONALITY
+	// DARK MODE
 
+	console.log(localStorage);
+
+	if (localStorage.getItem('mode') == 'light') {
+		document.body.classList.add('light');
+	}
+
+	// SLIDER FUNCTIONALITY
 	const sliderImages = Array.from(document.querySelectorAll('.slider-img'));
 	const sliderCircles = Array.from(document.querySelectorAll('.slider-circle'));
 	const rightArrowSlider = document.getElementById('right-arrow-slider');
