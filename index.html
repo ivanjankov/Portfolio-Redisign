@@ -10,6 +10,7 @@
 			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 			crossorigin="anonymous"
 		/>
+
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -23,19 +24,33 @@
 		<title>Ivan Jankov</title>
 	</head>
 	<body>
-		<nav class="nav navbar navbar-expand-lg" id="main-menu" role="navigation">
+		<nav
+			class="nav navbar navbar-expand-lg position-relative"
+			id="main-menu"
+			role="navigation"
+		>
 			<button
 				class="navbar-toggler"
 				type="button"
 				data-toggle="collapse"
 				data-target="#NavbarContent"
 				aria-controls="NavbarContent"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
 			>
-				<span class="navbar-toggler-icon"></span>
+				<span><i class="fas fa-bars" id="toggler"></i></span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="NavbarContent">
-				<ul class="navbar-nav m-auto">
+				<ul
+					class="
+						navbar-nav
+						m-auto
+						d-flex
+						justify-content-center
+						align-items-center
+					"
+				>
 					<li class="nav-item mx-3">
 						<a href="#about-me" class="nav-link">About Me</a>
 					</li>
@@ -48,7 +63,7 @@
 				</ul>
 			</div>
 
-			<div class="me-3">
+			<div class="me-3" id="mode-trigger">
 				<input type="checkbox" class="checkbox" id="checkbox" />
 				<label for="checkbox" class="label">
 					<i class="fas fa-moon"></i>
@@ -58,13 +73,29 @@
 			</div>
 		</nav>
 
-		<div class="min-vh-100 pb-5" id="header-content">
-			<div class="row min-vh-100">
-				<div class="col-md-5 my-auto ms-auto ps-5">
+		<div class="pb-md-5 0" id="header-content">
+			<div class="row header-wrapper">
+				<div
+					class="
+						col-md-5
+						my-auto
+						ms-auto
+						ps-0 ps-md-5
+						text-center text-md-start
+						mt-auto
+					"
+				>
 					<h2 class="h2">Hello, My Name is</h2>
 					<h1 class="h1">Ivan Jankov</h1>
 
-					<div class="animation-container d-flex align-items-center">
+					<div
+						class="
+							animation-container
+							d-flex
+							align-items-center
+							justify-content-md-start justify-content-center
+						"
+					>
 						<div class="animation-wrapper">
 							<div class="animation-item">Web Designer</div>
 							<div class="animation-item">Web Developer</div>
@@ -76,7 +107,7 @@
 						in creating stylish and modern websiteervices
 					</p>
 				</div>
-				<div class="col-md-7 polygon-wrapper">
+				<div class="col-md-7 polygon-wrapper d-none d-md-block">
 					<div class="polygon">
 						<p>hello</p>
 					</div>
@@ -90,23 +121,32 @@
 		>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-5">
+					<div
+						class="
+							col-md-4
+							d-flex
+							justify-content-center
+							align-self-center
+							d-none d-md-block
+						"
+					>
 						<img
 							src="img/profile-photo.jpg"
 							alt="Profile Photo"
-							class="square"
-							height="400px"
-							widht="auto"
+							class="square img-fluid"
 						/>
 					</div>
-					<div class="col-md-7">
-						<h2 class="h2 mb-5" id="about-me-heading">About me</h2>
+					<div class="col-md-7 offset-md-1">
+						<h2 class="h2 mb-5 text-center text-md-start" id="about-me-heading">
+							About me
+						</h2>
 						<p>
 							Hello everyone I'm Junior Front End Developer based in Skopje,
-							Macedonia. Before web development I used to work in the field of
-							traffic engeneering. Since the corona outbreak I decided to
-							challenge myself in coding and I can say for sure that this is the
-							best decision in my life. I am a quick to learn and willing to
+							Macedonia. Hello everyone I'm Junior Front End Developer based in
+							Skopje, Macedonia. Before web development I used to work in the
+							field of traffic engeneering. Since the corona outbreak I decided
+							to challenge myself in coding and I can say for sure that this is
+							the best decision in my life. I am a quick to learn and willing to
 							adapt to any job. I strive to write elegant and efficiant code,
 							whether it be HTML, CSS,Javascript or any other programming
 							language.
@@ -137,8 +177,8 @@
 				<div class="container my-5">
 					<div class="projects-wrapper">
 						<div class="row">
-							<div class="col-md-4 position-relative">
-								<a href="projects/bushkraft.html">
+							<div class="col-md-6 col-lg-4 position-relative mb-4">
+								<a href="projects/lile-portfolio.html">
 									<div class="address-bar d-flex justify-content-end">
 										<i class="far fa-window-minimize"></i>
 										<i class="far fa-window-restore"></i>
@@ -146,24 +186,41 @@
 									</div>
 									<div class="screen">
 										<img
-											src="img/Projects/bushcraft/1.png"
+											src="img/Projects/lile-portfolio/img/full-landing.png"
 											alt="Bushkraft Landing page"
 										/>
 									</div>
 								</a>
 							</div>
-							<div class="col-md-4 position-relative">
-								<div class="address-bar d-flex justify-content-end">
-									<i class="far fa-window-minimize"></i>
-									<i class="far fa-window-restore"></i>
-									<i class="fas fa-times"></i>
-								</div>
-								<div class="screen">
-									<img
-										src="img/Projects/animal-land/2.png"
-										alt="Bushkraft Landing page"
-									/>
-								</div>
+							<div class="col-md-6 col-lg-4 position-relative mb-4">
+								<a href="projects/janewebsite.html">
+									<div class="address-bar d-flex justify-content-end">
+										<i class="far fa-window-minimize"></i>
+										<i class="far fa-window-restore"></i>
+										<i class="fas fa-times"></i>
+									</div>
+									<div class="screen">
+										<img
+											src="img/Projects/herbalife/full-landing.png"
+											alt="Bushkraft Landing page"
+										/>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-6 col-lg-4 position-relative mb-4">
+								<a href="projects/onofo.html">
+									<div class="address-bar d-flex justify-content-end">
+										<i class="far fa-window-minimize"></i>
+										<i class="far fa-window-restore"></i>
+										<i class="fas fa-times"></i>
+									</div>
+									<div class="screen">
+										<img
+											src="img/Projects/onofo/full-page.png"
+											alt="Bushkraft Landing page"
+										/>
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -177,39 +234,82 @@
 					<h2 class="h2 text-uppercase">want to hire me</h2>
 					<p>Send me a message</p>
 				</div>
-
-				<div class="form-wrapper w-50 m-auto">
-					<form
-						action=""
-						method="POST"
-						class="form-group d-flex justify-content-center flex-column my-3"
-						id="contact-form"
-					>
-						<input
-							type="text"
-							name=""
-							placeholder="Your Name"
-							class="form-control my-1"
-						/>
-						<input
-							type="email"
-							name="_replyto"
-							placeholder="E-mail address"
-							class="form-control my-1"
-						/>
-						<textarea
-							type="text"
-							name="message"
-							placeholder="Message..."
-							id=""
-							cols="30"
-							rows="10"
-							class="form-control mt-1 mb-3"
-						></textarea>
-						<button type="submit" class="btn-custom p-2 rounded-pill">
-							Send Message
-						</button>
-					</form>
+				<div class="row mt-5">
+					<div class="col-md-6 d-flex flex-column">
+						<div
+							class="
+								location
+								d-flex
+								my-3
+								contact-icons
+								justify-content-md-start
+								justify-content-center
+								justify-content-md-start
+							"
+						>
+							<i class="fas fa-map-marker-alt fa-2x me-4 align-self-center"></i>
+							<div>
+								<h3>Location</h3>
+								<p class="m-0">Skopje, Macedonia</p>
+							</div>
+						</div>
+						<div
+							class="
+								contact
+								d-flex
+								my-3
+								contact-icons
+								justify-content-center justify-content-md-start
+							"
+						>
+							<i class="fas fa-envelope me-4 fa-2x align-self-center"></i>
+							<div>
+								<h3>Contact Me</h3>
+								<p class="m-0">ivanjankov07@gmail.com</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-wrapper m-auto">
+							<form
+								action=""
+								method="POST"
+								class="
+									form-group
+									d-flex
+									justify-content-center
+									flex-column
+									my-3
+								"
+								id="contact-form"
+							>
+								<input
+									type="text"
+									name=""
+									placeholder="Your Name"
+									class="form-control my-1"
+								/>
+								<input
+									type="email"
+									name="_replyto"
+									placeholder="E-mail address"
+									class="form-control my-1"
+								/>
+								<textarea
+									type="text"
+									name="message"
+									placeholder="Message..."
+									id=""
+									cols="30"
+									rows="10"
+									class="form-control mt-1 mb-3"
+								></textarea>
+								<button type="submit" class="btn-custom p-2 rounded-pill">
+									Send Message
+								</button>
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -225,16 +325,26 @@
 			>
 				<p>Connect With Me</p>
 				<div class="icons-wrapper">
-					<i class="fab fa-linkedin fa-2x mx-1"></i>
-					<i class="fab fa-github-square fa-2x mx-1"></i>
+					<a href="https://www.linkedin.com/in/ivan-jankov/" taget="_blank">
+						<i class="fab fa-linkedin fa-2x mx-1"></i>
+					</a>
+					<a href="https://github.com/ivanjankov" target="_blank">
+						<i class="fab fa-github-square fa-2x mx-1"></i>
+					</a>
 				</div>
 			</div>
 		</div>
 	</body>
 
 	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"
+	></script>
+
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 		crossorigin="anonymous"
 	></script>
 </html>

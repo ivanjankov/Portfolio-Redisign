@@ -1,0 +1,13 @@
+[
+	{
+		"name": "Bushkraft Kitchen",
+		"headerBackground": "/img/Projects/bushkraft/thumbnail.png",
+		"projectDescription": "Bushkraft Kitchen is a website based on Youtube channel. Mainly that is a channel that post cooking videos every Saturday and Wednesday. Main goal of the website is selling merchendice.",
+		"technologies": "Html, CSS, JavaScript",
+		"objective": "Our Objective is to be the best",
+		"aproach": "After deciding to see what is gonna be the approach",
+		"gallery": {
+			"pic1": "./img/Projects/bushkraft/flowers-thumbnail.jpg"
+		}
+	}
+]
