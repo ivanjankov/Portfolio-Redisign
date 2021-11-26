@@ -127,10 +127,20 @@ body.light {
 #main-menu.light {
 	background-color: #fff !important;
 	color: #111 !important;
+	box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.1);
+}
+
+#project-name {
+	color: #fff !important;
 }
 
 #main-menu.light a {
 	color: #111 !important;
+}
+
+.description-card.light {
+	background-color: #f6f9fc !important;
+	box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.2);
 }
 
 /* HEADER COMPONENT */

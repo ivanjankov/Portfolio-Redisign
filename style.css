@@ -51,7 +51,7 @@ a:hover {
 }
 
 #header-content {
-	overflow-x: hidden !important;
+	overflow: hidden !important;
 	min-height: 60vh;
 }
 
@@ -138,16 +138,21 @@ a:hover {
 }
 
 body.light {
-	background-color: #fff !important;
+	background-color: #f6f9fc !important;
 	color: #111 !important;
 }
 
 #main-menu.light {
 	background-color: #fff !important;
-	color: #111 !important;
+	color: green !important;
 }
 
 #main-menu.light a {
+	color: #111 !important;
+}
+
+.form-control.light {
+	background-color: #b7b8b9 !important;
 	color: #111 !important;
 }
 
@@ -166,6 +171,7 @@ body.light {
 #about-me {
 	background-color: #171717;
 	height: 80vh;
+	box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.1);
 }
 
 #about-me.light {
@@ -174,12 +180,16 @@ body.light {
 }
 
 #contact.light {
-	background-color: #ccc !important;
+	background-color: #fff !important;
+	color: #111 !important;
+}
+
+.icons.light {
 	color: #111 !important;
 }
 
 .square {
-	background-color: greenyellow;
+	background-color: var(--secondary-green);
 	border-radius: 20px;
 	box-shadow: -20px -20px rgba(128, 128, 128, 0.1);
 }
@@ -198,6 +208,10 @@ body.light {
 	bottom: -10px;
 }
 
+.text-green {
+	color: var(--secondary-green);
+}
+
 .list-technologies {
 	display: flex;
 	padding: 0;
@@ -212,7 +226,7 @@ body.light {
 
 /* PROJECTS */
 
-#peojects {
+#projects {
 	min-height: 70vh;
 }
 
@@ -262,8 +276,13 @@ body.light {
 
 /* CONTACT */
 
+.contact-wrapper {
+	border-bottom: 3px solid var(--secondary-green);
+}
+
 #contact {
 	background-color: #171717;
+	box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.1);
 }
 
 #contact-form input {

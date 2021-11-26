@@ -1,15 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
 	// TOGGLE DARK MODE
 	const checkbox = document.getElementById('checkbox');
-	// const mainNav = document.getElementById('main-menu');
-	// const aboutMe = document.getElementById('about-me');
-	// const contact = document.getElementById('contact');
+	const mainNav = document.getElementById('main-menu');
+	const aboutMe = document.getElementById('about-me');
+	const contact = document.getElementById('contact');
+	const iconsContact = Array.from(document.querySelectorAll('.icons'));
+	const inputs = Array.from(document.querySelectorAll('.form-control'));
 
 	if (localStorage.getItem('mode') == 'light') {
 		checkbox.checked = true;
-		document.body.classList.add('light');
+		noDark();
 	} else {
 		checkbox.checked = false;
+		darkMode();
 	}
 
 	checkbox.addEventListener('change', () => {
@@ -28,12 +31,25 @@ document.addEventListener('DOMContentLoaded', () => {
 		aboutMe.classList.remove('light');
 		contact.classList.remove('light');
 		mainNav.classList.remove('light');
+		iconsContact.forEach((img) => {
+			img.classList.remove('light');
+		});
+
+		inputs.forEach((input) => {
+			input.classList.remove('light');
+		});
 	}
 	function noDark() {
 		localStorage.setItem('mode', 'light');
 		document.body.classList.add('light');
+		mainNav.classList.add('light');
 		aboutMe.classList.add('light');
 		contact.classList.add('light');
-		mainNav.classList.add('light');
+		iconsContact.forEach((img) => {
+			img.classList.add('light');
+		});
+		inputs.forEach((input) => {
+			input.classList.add('light');
+		});
 	}
 });

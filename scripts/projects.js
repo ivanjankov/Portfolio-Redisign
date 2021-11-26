@@ -1,10 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
 	// DARK MODE
+	const checkbox = document.getElementById('checkbox');
+	const mainNav = document.getElementById('main-menu');
+	const descriptionCard = Array.from(
+		document.querySelectorAll('.description-card')
+	);
 
-	console.log(localStorage);
+	checkbox.addEventListener('change', () => {
+		console.log('hello');
+	});
 
 	if (localStorage.getItem('mode') == 'light') {
+		checkbox.checked = true;
+		noDark();
+	} else {
+		checkbox.checked = false;
+		darkMode();
+	}
+	checkbox.addEventListener('change', () => {
+		let mode = localStorage.getItem('mode');
+		if (mode !== 'dark') {
+			darkMode();
+		} else {
+			noDark();
+		}
+	});
+
+	function darkMode() {
+		localStorage.setItem('mode', 'dark');
+		document.body.classList.remove('light');
+		mainNav.classList.remove('light');
+		descriptionCard.forEach((card) => {
+			card.classList.remove('light');
+		});
+	}
+	function noDark() {
+		localStorage.setItem('mode', 'light');
 		document.body.classList.add('light');
+		mainNav.classList.add('light');
+		descriptionCard.forEach((card) => {
+			card.classList.add('light');
+		});
 	}
 
 	// SLIDER FUNCTIONALITY
