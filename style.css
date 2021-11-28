@@ -170,7 +170,7 @@ body.light {
 
 #about-me {
 	background-color: #171717;
-	height: 80vh;
+
 	box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.1);
 }
 
@@ -217,6 +217,7 @@ body.light {
 	padding: 0;
 	border-bottom: 1px solid red;
 	padding-bottom: 10px;
+	font-size: 0.9rem;
 }
 
 .list-technologies li {
@@ -247,11 +248,11 @@ body.light {
 	position: absolute;
 	margin: 0;
 	padding: 0;
-	-webkit-transition: top 5s;
+	/* -webkit-transition: top 5s;
 	-moz-transition: top 5s;
 	-ms-transition: top 5s;
 	-o-transition: top 5s;
-	transition: bottom 5s;
+	transition: bottom 5s; */
 }
 
 .screen:hover img {
@@ -484,9 +485,6 @@ body.light {
 	#about-me-heading::before {
 		left: 50%;
 		transform: translateX(-50%);
-	}
-	#about-me {
-		height: 50vh;
 	}
 
 	.screen img {
