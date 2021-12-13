@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const contact = document.getElementById('contact');
 	const iconsContact = Array.from(document.querySelectorAll('.icons'));
 	const inputs = Array.from(document.querySelectorAll('.form-control'));
+	const btnSubmit = document.getElementById('btn-custom');
 
 	if (localStorage.getItem('mode') == 'light') {
 		checkbox.checked = true;
@@ -38,6 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		inputs.forEach((input) => {
 			input.classList.remove('light');
 		});
+
+		btnSubmit.classList.remove('light');
 	}
 	function noDark() {
 		localStorage.setItem('mode', 'light');
@@ -51,5 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		inputs.forEach((input) => {
 			input.classList.add('light');
 		});
+		btnSubmit.classList.add('light');
 	}
 });

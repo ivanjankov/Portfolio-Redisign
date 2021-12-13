@@ -320,6 +320,11 @@ body.light {
 	transition: 0.5s ease;
 }
 
+.btn-custom.light {
+	color: var(--secondary-green);
+	border-color: var(--secondary-green);
+}
+
 .btn-custom:hover {
 	background-color: rgba(197, 197, 197, 0.1);
 	color: var(--secondary-green);
