@@ -270,11 +270,6 @@ body.light {
 	position: absolute;
 	margin: 0;
 	padding: 0;
-	/* -webkit-transition: top 5s;
-	-moz-transition: top 5s;
-	-ms-transition: top 5s;
-	-o-transition: top 5s;
-	transition: bottom 5s; */
 }
 
 .screen:hover img {
@@ -295,6 +290,9 @@ body.light {
 .address-bar i {
 	margin: 8px;
 	color: var(--primary-dark);
+}
+.project-link {
+	font-size: 1.2rem;
 }
 
 /* CONTACT */

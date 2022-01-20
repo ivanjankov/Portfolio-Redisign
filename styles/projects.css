@@ -170,13 +170,7 @@ body.light {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
-
-	/* border-bottom: 1px solid var(--secondary-green); */
 }
-
-/* .project-steps {
-	border-bottom: 3px solid var(--secondary-green);
-} */
 
 .project-name {
 	border-top: 1px solid var(--secondary-green);
